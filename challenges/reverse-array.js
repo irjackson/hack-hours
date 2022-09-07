@@ -32,16 +32,15 @@ const reverseSentence = sentence => {
   let currWord = [];
   for (let i = 0; i <= sentence.length; i++){
     if(sentence[i] === undefined){
-      reversed.unshift(currWord.join(''))
+      reversed.unshift(currWord.join(''));
       return reversed.join(' ');
-    }
+    };
     if(sentence[i] === ' '){
-      reversed.unshift(currWord.join(''))
+      reversed.unshift(currWord.join(''));
       currWord = [];
-    }
-    console.log(currWord)
-    currWord.push(sentence[i])
-  }
+    };
+    currWord.push(sentence[i]);
+  };
 };
 
 console.log(reverseSentence('bob likes dogs alot'));
