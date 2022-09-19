@@ -30,6 +30,9 @@ const commonElements = (...args) => {
       result.push(prop)
     }
   }
+  if (result.length === 0){
+    return 'Nothing in common!'
+  }
   return result;
 }
 arr1 = [2, 10,'cat', 3, 99, 2000, 'dog', 'lion'];
