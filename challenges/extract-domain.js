@@ -9,7 +9,7 @@ function extractDomain(domain){
   const extract = [];
   let capture = false;
   let dotCom = 0;
-  
+
   for (let i = split.length -1; i >= 0; i--){
     if (check.join('').includes("moc.")){
       dotCom = i;
@@ -30,7 +30,7 @@ function extractDomain(domain){
     extract.push(split[dotCom]);
     dotCom = dotCom - 1;
   }
-  return extract.reverse().join('');
+  return 'Domain name: ' + extract.reverse().join('');
 }
 
 console.log(extractDomain("https://www.cnet.com"));

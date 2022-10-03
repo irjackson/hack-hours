@@ -29,7 +29,7 @@ const drawStairs = (n, line = [], total = n) => {
   console.log(line.join(''));
   return drawStairs(n-1, line = [], total);
 };
-console.log(drawStairs(6));
+console.log(drawStairs(10));
 /* 
 
 Extension:

@@ -19,6 +19,7 @@ const commonElements = (...args) => {
   const output = {};
   const result = [];
   const compare = args.length;
+  
   for (let i = 0; i < args.length; i++){
     for (let j = 0; j < args[i].length; j++){
       output[args[i][j]] = output[args[i][j]] + 1|| 1;
