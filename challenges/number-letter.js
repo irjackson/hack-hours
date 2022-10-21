@@ -84,6 +84,5 @@ function do_math(str){
   }
   return parseInt(calculate);
 };
-
 console.log(do_math("24z6 1x23 y369 89a 900b"));
 console.log(do_math("10a 90x 14b 78u 45a 7b 34y"));
