@@ -23,23 +23,26 @@
 
 function do_math(str){
   const nums = str.split(' ');
-  let letters = []
-  console.log(nums.sort());
+  let letters = [];
+  console.log(nums);
   //Sort by the numbers by letter
   for (let i = 0; i < nums.length; i++){
     letters.push(nums[i].match(/[a-z]/gi));
   };
   letters = letters.flat().sort();
   console.log(letters);
-  let sortedNums = [];
+  let sortedNums = new Set();
   for (let i = 0; i < letters.length; i++){
-    for(let j = 0; j <= nums[i].length; j++){
-      if (nums[j].includes(letters[i])){
-        sortedNums.push(nums[j]);
-      };
+    let index = 0;
+    while (nums[index]){
+      if (nums[index].includes(letters[i]))
+        sortedNums.add(nums[index]);
+        index++;
     };
   };
   console.log(sortedNums);
+  sortedNums = Array.from(sortedNums);
+
   //Remove letters from sorted numbers
   for (let i = 0; i < sortedNums.length; i++){
     let curr = sortedNums[i].split('');
@@ -51,7 +54,7 @@ function do_math(str){
     }
     sortedNums[i] = newNum;
   }
-  console.log(sortedNums)
+  console.log(sortedNums);
 
   //Iterate through sortedNums and apply operators to 0th index
   let calculate = Number(sortedNums.shift());
@@ -82,7 +85,9 @@ function do_math(str){
     console.log(sortedNums);
     console.log(calculate);
   }
-  return parseInt(calculate);
+  return parseInt(Math.ceil(calculate));
 };
+
 console.log(do_math("24z6 1x23 y369 89a 900b"));
+console.log(do_math("24z6 1z23 y369 89z 900b"));
 console.log(do_math("10a 90x 14b 78u 45a 7b 34y"));
