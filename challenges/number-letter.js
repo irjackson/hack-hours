@@ -79,8 +79,6 @@ function do_math(str){
       counter = 0;
     }
     sortedNums.shift();
-    console.log(sortedNums);
-    console.log(calculate);
   }
   return parseInt(Math.ceil(calculate));
 };
