@@ -25,7 +25,7 @@ function do_math(str){
   const nums = str.split(' ');
   let letters = [];
 
-  //Sort by the numbers by letter
+  //Sort array elements by letter
   for (let i = 0; i < nums.length; i++){
     letters.push(nums[i].match(/[a-z]/gi));
   };
