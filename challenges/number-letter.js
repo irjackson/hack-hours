@@ -24,13 +24,12 @@
 function do_math(str){
   const nums = str.split(' ');
   let letters = [];
-  console.log(nums);
+
   //Sort by the numbers by letter
   for (let i = 0; i < nums.length; i++){
     letters.push(nums[i].match(/[a-z]/gi));
   };
   letters = letters.flat().sort();
-  console.log(letters);
   let sortedNums = new Set();
   for (let i = 0; i < letters.length; i++){
     let index = 0;
@@ -40,7 +39,6 @@ function do_math(str){
         index++;
     };
   };
-  console.log(sortedNums);
   sortedNums = Array.from(sortedNums);
 
   //Remove letters from sorted numbers
@@ -54,13 +52,12 @@ function do_math(str){
     }
     sortedNums[i] = newNum;
   }
-  console.log(sortedNums);
 
   //Iterate through sortedNums and apply operators to 0th index
   let calculate = Number(sortedNums.shift());
   let operators = ['+', '-', '*', '/'];
   let counter = 0;
-  console.log(calculate);
+
   while (sortedNums.length){
     switch(operators[counter]){
       case '+':
