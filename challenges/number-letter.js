@@ -39,6 +39,7 @@ function do_math(str){
         index++;
     };
   };
+  //Convert sortedNums from Set to array
   sortedNums = Array.from(sortedNums);
 
   //Remove letters from sorted numbers
