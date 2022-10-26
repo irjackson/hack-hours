@@ -84,6 +84,7 @@ function do_math(str){
   return parseInt(Math.ceil(calculate));
 };
 
-console.log(do_math("24z6 1x23 y369 89a 900b"));
-console.log(do_math("24z6 1z23 y369 89z 900b"));
-console.log(do_math("10a 90x 14b 78u 45a 7b 34y"));
+console.log(do_math("24z6 1x23 y369 89a 900b")); //expected result 1299
+console.log(do_math("24z6 1z23 y369 89z 900b")); //expected result 1414
+console.log(do_math("10a 90x 14b 78u 45a 7b 34y")); //expected result 60
+console.log(do_math("55j 456a 8r 26b 13h 97f")); //expected result 99
