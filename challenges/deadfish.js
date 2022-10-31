@@ -34,3 +34,5 @@ function parse(str){
   }
   return returnArr;
 };
+
+console.log(parse("iiisdoso"));
