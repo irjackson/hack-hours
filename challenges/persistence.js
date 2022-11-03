@@ -21,7 +21,7 @@ function persistence(num, times = 0){
     digitArr.push(stringify[i]);
   }
 
-  //convert digits to number and multiply until digitArr is empty
+  //convert elements to numbers and multiply until digitArr is empty
   let result = Number(digitArr.shift());
   while (digitArr.length){
     result *= Number(digitArr[0]);
