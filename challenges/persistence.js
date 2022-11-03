@@ -8,20 +8,30 @@
 // 4 --> 0 (because 4 is already a one-digit number)
 
 function persistence(num, times = 0){
+  //base case
   if (num < 0) return 'Error: must be positive number';
   if (num < 10) return times;
+
+  //convert number to string
   let stringify = num.toString();
+
+  //push digits to array
   let digitArr = [];
   for (let i = 0; i < stringify.length; i++){
     digitArr.push(stringify[i]);
   }
 
+  //convert digits to number and multiply until digitArr is empty
   let result = Number(digitArr.shift());
   while (digitArr.length){
     result *= Number(digitArr[0]);
     digitArr.shift();
   }
+
+  //increment # of times multipled
   times += 1;
+
+  //recursively call function, pass in multipled result and times multiplied
   return persistence(result, times);
 };
 
