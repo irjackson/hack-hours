@@ -4,19 +4,19 @@
 
 function moveZeros(array){
   let zeroCount = 0;
-  const newArray = [];
+  const returnArray = [];
   for (let i = 0; i < array.length; i++){
     if (array[i] === 0){
       zeroCount += 1;
       continue;
     };
-    newArray.push(array[i]);
+    returnArray.push(array[i]);
   };
   while (zeroCount > 0){
-    newArray.push(0);
+    returnArray.push(0);
     zeroCount--;
   }
-  return newArray;
+  return returnArray;
 };
 
 console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]));
