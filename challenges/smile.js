@@ -33,4 +33,3 @@ function smile(str){
 console.log(smile("Howdy :("));
 console.log(smile("Never be sad =["));
 console.log(smile("Change this `=(` and this `:[`"))
-console.log(smile("I wasn't very creative here :-( But it works ;~[ =~("));
