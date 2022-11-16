@@ -14,7 +14,7 @@ function objDepth(obj, depth = 1){
   //base case
   if(Array.isArray(obj)) return 0;
   if (typeof obj !== 'object'){
-    return 'Error: input an object';
+    return 'Error: input parameter is not an object';
   };
   if (Object.getOwnPropertyNames(obj).length === 0) return depth = 0;
   //recursive case
