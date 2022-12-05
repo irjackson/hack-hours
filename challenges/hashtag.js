@@ -30,8 +30,9 @@ function hashtag(str){
       newTag.push(str[i]);
     };
   }
-  if (newTag.join('') === '#') return false;
-  return newTag.join('');
+  newTag = newTag.join('');
+  if (newTag === '#') return false;
+  return newTag;
 };
 
 console.log(hashtag(' Hello there thanks for trying my Kata'));
