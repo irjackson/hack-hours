@@ -15,7 +15,7 @@
 // ""                                        =>  false
 
 function hashtag(str){
-  if (str.length > 139) return false;
+  if (str.length > 140) return false;
   let newTag = ['#'];
   let capitalize = false;
   for (let i = 0; i < str.length; i++){
