@@ -15,7 +15,7 @@
 // ""                                        =>  false
 
 function hashtag(str){
-  if (str.length > 140) return false;
+  if (str.length > 139) return false;
   let newTag = ['#'];
   let capitalize = false;
   for (let i = 0; i < str.length; i++){
@@ -31,10 +31,13 @@ function hashtag(str){
     };
   }
   newTag = newTag.join('');
+  
   if (newTag === '#') return false;
+ 
   return newTag;
 };
 
 console.log(hashtag(' Hello there thanks for trying my Kata'));
 console.log(hashtag('    Hello     World   '));
 console.log(hashtag(''));
+console.log(hashtag('140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140chars140c'));
