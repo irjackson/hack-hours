@@ -10,12 +10,16 @@
 // Invalid characters should be ignored.
 
 function parse(str){
+  //check that parameter is a string
   if (typeof str !== 'string') return 'Error: must be a string';
+  
+  //split string into array of characters
   const input = str.split('');
   let result = 0;
   const returnArr = [];
 
   while (input.length){
+    //switch cases for first element of array
     switch(input[0]){
       case 'i':
         result += 1;
@@ -30,6 +34,7 @@ function parse(str){
         returnArr.push(result);
         break;
     }
+    //remove first element from array before loop
     input.shift();
   }
   return returnArr;
