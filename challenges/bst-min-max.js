@@ -29,16 +29,19 @@ returns 8, becuase 9 - 1 = 8
 */
 
 const bstMinMax = root => {
+
+  //helper function to find value furthest to the left in the tree
   const min = node => {
     if (node.left) return min(node.left);
     return node.value;
   }
-
+  //helper function to find value furthest to the right in the tree
   const max = node => {
     if (node.right) return max(node.right);
     return node.value;
   }
 
+  //subtract result of min from result of max to find difference
   return max(root) - min(root);
 };
 
