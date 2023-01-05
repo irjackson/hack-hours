@@ -31,5 +31,5 @@ function totalPoints(collection, points = 0){
   return totalPoints(collection.slice(1), points)
 };
 
-const record = ["3:1", "2:2", "0:1", "1:2", "4:0", "1:1", "2:4", "3:0", "1:3", "2:1"]; // expecting points = 14
+const record = ["3:1", "2:2", "0:1", "1:2", "4:0", "1:1", "2:4", "3:0", "1:3", "2:1"]; // expecting total points = 14
 console.log(totalPoints(record));
