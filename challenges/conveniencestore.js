@@ -30,7 +30,9 @@ function changeEnough(pocket, totalDue){
       coinTotal += (.01 * pocket[i]);
     };
   }
-  return coinTotal > totalDue;
+  return coinTotal >= totalDue;
 };
 
 console.log(changeEnough([2, 100, 0, 0], 14.11));
+console.log(changeEnough([0, 0, 20, 5], 0.75));
+console.log(changeEnough([30, 40, 20, 5], 12.55));
