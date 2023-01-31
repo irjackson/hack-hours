@@ -17,18 +17,20 @@
 function changeEnough(pocket, totalDue){
   let coinTotal = 0;
   for (let i = 0; i < pocket.length; i++){
-    if (i === 0){
-      coinTotal += (.25 * pocket[i]);
-    };
-    if (i === 1){
-      coinTotal += (.10 * pocket[i]);
-    };
-    if (i === 2){
-      coinTotal += (.05 * pocket[i]);
-    };
-    if (i === 3){
-      coinTotal += (.01 * pocket[i]);
-    };
+    switch (i){
+      case 0:
+        coinTotal += (.25 * pocket[i]);
+        break;
+      case 1:
+        coinTotal += (.10 * pocket[i]);
+        break;
+      case 2:
+        coinTotal += (.05 * pocket[i]);
+        break;
+      case 3:
+        coinTotal += (.01 * pocket[i]);
+        break;
+    }
   }
   return coinTotal >= totalDue;
 };
