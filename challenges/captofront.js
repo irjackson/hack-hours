@@ -19,3 +19,7 @@ function capToFront(str){
   }
   return capArray.join('') + lowerArray.join('');
 };
+
+console.log(capToFront('hApPy'));
+console.log(capToFront('moveMENT'));
+console.log(capToFront('shOrtCAKE'))
