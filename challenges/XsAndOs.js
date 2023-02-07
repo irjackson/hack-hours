@@ -16,6 +16,7 @@
     // XO("zzoo") ➞ false
 
 function XO(str){
+  if (typeof str !== 'string') return 'ERROR: input must be a string';
   let xCount = 0;
   let oCount = 0;
   let input = str.split('')
@@ -35,3 +36,4 @@ console.log(XO('ooxx'));
 console.log(XO('xooxx'));
 console.log(XO('zpzpzpp'));
 console.log(XO('zzoo'));
+console.log(XO(8));
