@@ -45,7 +45,7 @@
     };
     paul = paulFirst + paulSecond;
     opponent = lowest + oppSecond;
-    return paul > opponent;
+    return Number(paul) > Number(opponent);
   };
 
   console.log(swapCards(41, 98));
