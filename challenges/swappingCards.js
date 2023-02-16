@@ -36,7 +36,7 @@
     let oppFirst = opponent.slice(0, 1);
     let oppSecond = opponent.slice(1);
     let lowest;
-    if (paulFirst < paulSecond){
+    if (paulFirst <= paulSecond){
       lowest = paulFirst;
       paulFirst = oppFirst;
     } else {
@@ -49,3 +49,6 @@
   };
 
   console.log(swapCards(41, 98));
+  console.log(swapCards(12, 28));
+  console.log(swapCards(67, 53));
+  console.log(swapCards(77, 54));
