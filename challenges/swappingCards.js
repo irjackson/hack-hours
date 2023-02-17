@@ -31,6 +31,7 @@
   function swapCards(n1, n2){
     let paul = [String(n1).slice(0,1), String(n1).slice(1)];
     let opponent = [String(n2).slice(0,1), String(n2).slice(1)];
+    if (paul[0] === '0' || paul[1] === '0' || opponent[0] === '0' || opponent[1] === '0') return 'ERROR: Cards cannot include 0'
     let lowest;
     if (paul[0] <= paul[1]){
       lowest = paul[0];
@@ -50,3 +51,4 @@
   console.log(swapCards(12, 28));
   console.log(swapCards(67, 53));
   console.log(swapCards(77, 54));
+  console.log(swapCards(70, 80));
