@@ -29,22 +29,20 @@
   //   The cards don't include the number 0.
 
   function swapCards(n1, n2){
-    let paul = String(n1);
-    let opponent = String(n2);
-    let paulFirst = paul.slice(0, 1);
-    let paulSecond = paul.slice(1);
-    let oppFirst = opponent.slice(0, 1);
-    let oppSecond = opponent.slice(1);
+    let paul = [String(n1).slice(0,1), String(n1).slice(1)];
+    let opponent = [String(n2).slice(0,1), String(n2).slice(1)];
     let lowest;
-    if (paulFirst <= paulSecond){
-      lowest = paulFirst;
-      paulFirst = oppFirst;
+    if (paul[0] <= paul[1]){
+      lowest = paul[0];
+      paul[0] = opponent[0];
+      opponent[0] = lowest;
     } else {
-      lowest = paulSecond;
-      paulSecond = oppFirst;
+      lowest = paul[0];
+      paul[1] = opponent[0];
+      opponent[0] = lowest;
     };
-    paul = paulFirst + paulSecond;
-    opponent = lowest + oppSecond;
+    paul = paul.join('');
+    opponent = opponent.join('');
     return Number(paul) > Number(opponent);
   };
 
