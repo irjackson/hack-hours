@@ -37,6 +37,10 @@ function vendingMachine(products, payment, choice){
       let changeTotal = payment - products[i].price;
       let change = [];
       if (changeTotal < 0) return 'Not enough money for this product';
+      if (changeTotal === 0){
+        delivery['change'] = change;
+        break;
+      }
       for (let i = 0; i < coins.length; i++){
         if (coins[i] <= changeTotal){
           change.push(coins[i]);
