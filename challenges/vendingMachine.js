@@ -51,6 +51,6 @@ function vendingMachine(products, payment, choice){
 };
 
 console.log(vendingMachine(products, 200, 7));
-console.log(vendingMachine(products, 300, 4));
+console.log(vendingMachine(products, 500, 6));
 console.log(vendingMachine(products, 500, 0));
 console.log(vendingMachine(products, 90, 1));
