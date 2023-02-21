@@ -32,15 +32,15 @@ function vendingMachine(products, payment, choice){
   const delivery = {};
   const coins = [500, 200, 100, 50, 20, 10];
   for (let i = 0; i < products.length; i++){
-    if (choice === products[i].number){
-      delivery['product'] = products[i].name;
-      let changeTotal = payment - products[i].price;
+    if (choice === products[i]['number']){
+      delivery['product'] = products[i]['name'];
+      let changeTotal = payment - products[i]['price'];
       let change = [];
       if (changeTotal < 0) return 'Not enough money for this product';
       if (changeTotal === 0){
         delivery['change'] = change;
         break;
-      }
+      };
       for (let i = 0; i < coins.length; i++){
         if (coins[i] <= changeTotal){
           change.push(coins[i]);
