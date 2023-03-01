@@ -21,7 +21,6 @@ function sortArray(array, result = []){
   let sorter = [];
   let lowest = array[0];
   for (let i = 0; i < array.length; i++){
-    console.log(lowest);
     if (array[i] < lowest && !result.includes(array[i])){
       lowest = array[i];
     };
