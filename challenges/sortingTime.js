@@ -31,12 +31,12 @@ function sortArray(array, result = []){
       continue;
     } else {
       sorter.push(array[j])
-    }
-  }
+    };
+  };
   result.push(lowest);
   return sortArray(array = sorter, result);
 };
 
 console.log(sortArray([2, -5, 1, 4, 7, 8]));
 console.log(sortArray([23, 15, 34, 17, -28]));
-console.log(sortArray([2, -5, 1, 4, 7, 8]));
+console.log(sortArray([38, 57, 45, 18, 47, 39]));
