@@ -25,6 +25,7 @@ function sortArray(array, result = []){
       lowest = array[i];
     };
   };
+  result.push(lowest);
   for (let j = 0; j < array.length; j++){
     if (array[j] === lowest){
       continue;
@@ -32,7 +33,6 @@ function sortArray(array, result = []){
       sorter.push(array[j])
     };
   };
-  result.push(lowest);
   return sortArray(array = sorter, result);
 };
 
