@@ -24,49 +24,84 @@
 // Notes
   // Mubashir gets to pick his gold first!
 
-function goldDistribution(gold){
-  let mubashir = 0;
-  let matt = 0;
-  let takeTurns = false;
-  while (gold.length){
-    if (gold[0] === gold[gold.length-1] && takeTurns === false){
-      mubashir += gold[0];
+function goldDistribution(gold, takeTurns = false, players = [0,0]){
+  if (!gold.length) return players;
+  //Mubashir's turn
+  if (takeTurns === false){
+    if (gold[0] === gold[gold.length-1]){
+      players[0] += gold[0];
       gold.shift();
-      takeTurns = !takeTurns;
-      continue;
-    };
-    if (gold[0] === gold[gold.length-1] && takeTurns === true){
-      matt += gold[0];
+    }
+    else if (gold[0] > gold[gold.length-1]){
+      players[0] += gold[0];
       gold.shift();
-      takeTurns = !takeTurns;
-      continue;
-    };
-    if (gold[0] > gold[gold.length-1] && takeTurns === false){
-      mubashir += gold[0];
-      gold.shift();
-      takeTurns = !takeTurns;
-      continue;
-    };
-    if (gold[0] < gold[gold.length-1] && takeTurns === false){
-      mubashir += gold[gold.length-1];
+    }
+    else if (gold[0] < gold[gold.length-1]){
+      players[0] += gold[gold.length-1];
       gold.pop();
-      takeTurns = !takeTurns;
-      continue;
-    };
-    if (gold[0] > gold[gold.length-1] && takeTurns === true){
-      matt += gold[0];
+    }
+  };
+  //Matt's turn
+  if (takeTurns === true){
+    if (gold[0] === gold[gold.length-1]){
+      players[1] += gold[0];
       gold.shift();
-      takeTurns = !takeTurns;
-      continue;
-    };
-    if (gold[0] < gold[gold.length-1] && takeTurns === true){
-      matt += gold[gold.length-1];
+    }
+    else if (gold[0] > gold[gold.length-1]){
+      players[1] += gold[0];
+      gold.shift();
+    }
+    else if (gold[1] < gold[gold.length-1]){
+      players[1] += gold[gold.length-1];
       gold.pop();
-      takeTurns = !takeTurns;
-      continue;
     };
   };
-  return [mubashir, matt];
+  return goldDistribution(gold, !takeTurns, players);
+
+  //While loop approach
+
+  // let mubashir = 0;
+  // let matt = 0;
+  // let takeTurns = false;
+  // while (gold.length){
+  //   if (gold[0] === gold[gold.length-1] && takeTurns === false){
+  //     mubashir += gold[0];
+  //     gold.shift();
+  //     takeTurns = !takeTurns;
+  //     continue;
+  //   };
+  //   if (gold[0] === gold[gold.length-1] && takeTurns === true){
+  //     matt += gold[0];
+  //     gold.shift();
+  //     takeTurns = !takeTurns;
+  //     continue;
+  //   };
+  //   if (gold[0] > gold[gold.length-1] && takeTurns === false){
+  //     mubashir += gold[0];
+  //     gold.shift();
+  //     takeTurns = !takeTurns;
+  //     continue;
+  //   };
+  //   if (gold[0] < gold[gold.length-1] && takeTurns === false){
+  //     mubashir += gold[gold.length-1];
+  //     gold.pop();
+  //     takeTurns = !takeTurns;
+  //     continue;
+  //   };
+  //   if (gold[0] > gold[gold.length-1] && takeTurns === true){
+  //     matt += gold[0];
+  //     gold.shift();
+  //     takeTurns = !takeTurns;
+  //     continue;
+  //   };
+  //   if (gold[0] < gold[gold.length-1] && takeTurns === true){
+  //     matt += gold[gold.length-1];
+  //     gold.pop();
+  //     takeTurns = !takeTurns;
+  //     continue;
+  //   };
+  // };
+  // return [mubashir, matt];
 };
 
 console.log(goldDistribution([4, 2, 9, 5, 2, 7]));
