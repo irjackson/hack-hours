@@ -37,11 +37,8 @@ function ungroupStudents(studentData){
   for (let i = 0; i < studentData.length; i++){
     for (let student of studentData[i].data){
       const newEntry = {};
-      // console.log(student);
       newEntry.teacher = studentData[i].teacher;
-      // console.log(newEntry.teacher);
       const addDetails = Object.assign(newEntry, student);
-      // console.log(newEntry);
       result.push(newEntry);
     };
   };
