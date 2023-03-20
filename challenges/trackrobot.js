@@ -22,28 +22,28 @@
 
 function trackRobot(...movements){
   if (movements.length === 0) return [0, 0];
-  let newCoords = [0, 0];
+  let finalPos = [0, 0];
   const directions = ['n', 'e', 's', 'w'];
   let counter = 0
   for (let i = 0 ; i < movements.length; i++){
     if (i > 3) counter = 0;
     switch (directions[counter]){
       case 'n':
-        newCoords[1] += movements[i];
+        finalPos[1] += movements[i];
         break;
       case 'e':
-        newCoords[0] += movements[i];
+        finalPos[0] += movements[i];
         break;
       case 's':
-        newCoords[1] -= movements[i];
+        finalPos[1] -= movements[i];
         break;
       case 'w':
-        newCoords[0] -= movements[i];
+        finalPos[0] -= movements[i];
         break;
     };
     counter++;
   };
-  return newCoords;
+  return finalPos;
 };
 
 console.log(trackRobot(20, 30, 10, 40));

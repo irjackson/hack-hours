@@ -31,7 +31,7 @@ function persistence(num, times = 0){
   //increment # of times multipled
   times += 1;
 
-  //recursively call function, pass in multipled result and times multiplied
+  //recursively call function, pass in multiplied result and times multiplied
   return persistence(result, times);
 };
 
