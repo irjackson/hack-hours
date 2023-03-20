@@ -49,10 +49,10 @@ console.log(ungroupStudents([{
     teacher: "Ms. Car",
     data: [{
        name: "James",
-       emergenceNumber: "617-771-1082",
+       emergencyNumber: "617-771-1082",
     }, {
        name: "Alice",
-       alergies: ["nuts", "carrots"],
+       allergies: ["nuts", "carrots"],
     }],
   }, {
     teacher: "Mr. Lamb",
