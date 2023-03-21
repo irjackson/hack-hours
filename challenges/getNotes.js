@@ -21,7 +21,6 @@ function getNotesDistribution(students) {
   const noteDist = {};
   for (let i = 0; i < students.length; i++){
     for (let num of students[i].notes){
-      console.log(num);
       if (num < 6 && num > 0){
         noteDist[`${num}`] = noteDist[`${num}`] + 1 || 1;
       }
