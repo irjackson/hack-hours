@@ -115,4 +115,5 @@ console.log(shopA.dueAmount());
 console.log(shopA.fulfillOrder());
 console.log(shopA.dueAmount());
 console.log(shopA.fulfillOrder());
+console.log(shopA.listOrders());
 console.log(shopA.dueAmount());
