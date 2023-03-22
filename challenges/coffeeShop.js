@@ -105,6 +105,7 @@ let [menuA, menuB, menuC] = [
   new CoffeeShop("*** Tesha's ***", menuC, [])
 ];
 
+console.log(shopA.name);
 console.log(shopA.cheapestItem());
 console.log(shopA.drinksOnly());
 console.log(shopA.foodOnly());
@@ -114,6 +115,7 @@ console.log(shopA.listOrders());
 console.log(shopA.dueAmount());
 console.log(shopA.fulfillOrder());
 console.log(shopA.dueAmount());
+console.log(shopA.fulfillOrder());
 console.log(shopA.fulfillOrder());
 console.log(shopA.listOrders());
 console.log(shopA.dueAmount());
