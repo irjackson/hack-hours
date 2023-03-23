@@ -28,7 +28,7 @@ class CoffeeShop {
     const filtered = this.menu.filter(a => a['item'] === item)
     if (filtered.length > 0){
       this.orders.push(item);
-      return `Order of '${item}' added.`
+      return `Order of '${item}' added.`;
     } else {
       return 'This item is currently unavailable!';
     };
