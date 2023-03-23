@@ -43,7 +43,7 @@ class CoffeeShop {
   };
   listOrders(){
     return this.orders;
-  }
+  };
   dueAmount(){
     let total = 0;
     for (let i = 0; i < this.menu.length; i++){
