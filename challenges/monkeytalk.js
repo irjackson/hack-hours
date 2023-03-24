@@ -15,12 +15,8 @@ function monkeyTalk(txt){
   let first = true;
   let translation = [];
   for (let i = 0; i < txt.length; i++){
-    console.log(space);
     if (space){
-      console.log(txt[i]);
-      console.log(vowels.includes(txt[i]));
       if (vowels.includes(txt[i])){
-        console.log(txt[i]);
         if (first){
           translation.push('Eek');
           first = false;
@@ -37,14 +33,13 @@ function monkeyTalk(txt){
           space = false;
           continue;
         }
-        console.log(txt[i]);
         translation.push('ook');
         space = false;
       };  
     };
     if (txt[i] === ' '){
       space = true;
-    }
+    };
   };
   return translation.join(' ')+ '.';
 };
@@ -52,3 +47,4 @@ function monkeyTalk(txt){
 console.log(monkeyTalk("Hello"));
 console.log(monkeyTalk("Mubashir Hassan"));
 console.log(monkeyTalk("Edabit is Amazing"));
+console.log(monkeyTalk('you are so beautiful'));
