@@ -24,7 +24,6 @@ function monkeyTalk(txt){
           continue;
         }
         translation.push('eek');
-        space = false;
       } 
       else if (!vowels.includes(txt[i])){
         if (first){
@@ -34,8 +33,8 @@ function monkeyTalk(txt){
           continue;
         }
         translation.push('ook');
-        space = false;
       };  
+      space = false;
     };
     if (txt[i] === ' '){
       space = true;
