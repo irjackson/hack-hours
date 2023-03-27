@@ -22,7 +22,7 @@ function monkeyTalk(txt){
           first = false;
           space = false;
           continue;
-        }
+        };
         translation.push('eek');
       } 
       else if (!vowels.includes(txt[i])){
