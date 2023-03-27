@@ -22,11 +22,9 @@
 function pizzaPoints(customers, minOrders, minPrice){
   let eligible = [];
   for (let i = 0; i < Object.keys(customers).length; i++){
-    console.log(Object.keys(customers)[i]);
     if (Object.keys(customers)[i].length > minOrders){
       let tally = 0;
       for (let order of customers[Object.keys(customers)[i]]){
-        console.log(order);
         if (order > minPrice){
           tally += 1;
         };
@@ -47,4 +45,4 @@ let customersObj = {
 
 console.log(pizzaPoints(customersObj, 5, 20));
 console.log(pizzaPoints(customersObj, 3, 10));
-console.log()
+console.log(pizzaPoints(customersObj, 5, 100))
