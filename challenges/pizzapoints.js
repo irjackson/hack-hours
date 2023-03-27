@@ -22,10 +22,10 @@
 function pizzaPoints(customers, minOrders, minPrice){
   let eligible = [];
   for (let i = 0; i < Object.keys(customers).length; i++){
-    if (Object.keys(customers)[i].length > minOrders){
+    if (Object.keys(customers)[i].length >= minOrders){
       let tally = 0;
       for (let order of customers[Object.keys(customers)[i]]){
-        if (order > minPrice){
+        if (order >= minPrice){
           tally += 1;
         };
         if (tally > minOrders){
