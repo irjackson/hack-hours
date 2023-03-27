@@ -28,7 +28,7 @@ function pizzaPoints(customers, minOrders, minPrice){
         if (order >= minPrice){
           tally += 1;
         };
-        if (tally > minOrders){
+        if (tally >= minOrders){
           eligible.push(Object.keys(customers)[i]);
           break;
         };
