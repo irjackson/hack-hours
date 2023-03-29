@@ -41,3 +41,4 @@ function cupSwapping(swaps){
 console.log(cupSwapping(["AB", "CA"]));
 console.log(cupSwapping(["AC", "CA", "CA", "AC"]));
 console.log(cupSwapping(["BA", "AC", "CA", "BC"]));
+console.log(cupSwapping(["BC", "CB", "CA", "BA"]));
