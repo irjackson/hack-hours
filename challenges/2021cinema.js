@@ -20,21 +20,38 @@
 
 function maximumSeating(arr){
   let openSeats = 0;
-  for (i = 0; i < arr.length; i++){
+  let ones = 0;
+  for (let i = 0; i < arr.length; i++){
     if (arr[i] === 1){
+      ones++;
       let j = i - 2;
       while (arr[j] === 0){
         j++;
       };
-      console.log(j)
       if (j > 2){
         openSeats++;
+      }
+      j = i + 2;
+      while (arr[j] === 0){
+        j--;
       };
-    }
+      if (j < 2){
+        openSeats++;
+      };
+    };
   };
+  console.log(ones);
+  if (ones === 0){
+    for (let x = 0; x < arr.length; x++){
+      if (x === 0 || x % 3 === 0){
+        openSeats++;
+      }
+    }
+  }
   return openSeats;
 };
 
 console.log(maximumSeating([0, 0, 0, 1, 0, 0, 1, 0, 0, 0]));
-// console.log(maximumSeating([0, 0, 0, 0]));
-// console.log(maximumSeating([1, 0, 0, 0, 0, 1]));
+console.log(maximumSeating([0, 0, 0, 0]));
+console.log(maximumSeating([1, 0, 0, 0, 0, 1]));
+console.log(maximumSeating([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
