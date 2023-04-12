@@ -39,9 +39,12 @@ function stringExpansion(txt) {
       currCount--;
     }
   }
+  if (result.length === 0) return txt;
   return result.join('');
 };
 
 console.log(stringExpansion("3Mat"));
 console.log(stringExpansion("3M2u5b2a1s1h2i1r"));
 console.log(stringExpansion("3M123u42b12a"));
+console.log(stringExpansion(""));
+console.log(stringExpansion("airforce"));
