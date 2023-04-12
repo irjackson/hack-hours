@@ -25,22 +25,23 @@
 // stringExpansion("") ➞ ""
 
 function stringExpansion(txt) {
-  let expand = txt.split('');
+  let expander = txt.split('');
   let result = [];
   let repeater;
-  for (let i = 0; i < expand.length; i++){
-    console.log(isNaN(expand[i]));
-    if (!isNaN(expand[i])){
-      repeater = expand[i];
+  for (let i = 0; i < expander.length; i++){
+    if (!isNaN(expander[i])){
+      repeater = parseInt(expander[i]);
       continue;
     };
-    let counter = repeater;
-    while (counter > 0){
-      result.push(expand[i])
-      counter--;
+    let currCount = repeater;
+    while (currCount > 0){
+      result.push(expander[i])
+      currCount--;
     }
   }
   return result.join('');
 };
 
 console.log(stringExpansion("3Mat"));
+console.log(stringExpansion("3M2u5b2a1s1h2i1r"));
+console.log(stringExpansion("3M123u42b12a"));
