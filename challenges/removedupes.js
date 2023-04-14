@@ -43,13 +43,14 @@ function removeDuplicates(nums) {
       counter--;
     };
   };
-
+  let k = index;
+  
   while (nums[index] !== undefined){
     nums[index] = '_';
     index++;
   };
 
-  return nums.length + ', ' + 'nums = ' + nums;
+  return k + ', ' + 'nums = ' + nums;
 };
 
 console.log(removeDuplicates([0,0,1,1,1,1,2,3,3]));
