@@ -29,18 +29,26 @@ function removeDuplicates(nums) {
   const tracker = {};
   for (let i = nums.length - 1; i >= 0; i--){
     tracker[nums[i]] = tracker[nums[i]] + 1 || 1  
-    nums.pop();
   };
+
+  let index = 0;
   for (const key in tracker){
     let counter = tracker[key];
     if (counter > 2){
       counter = 2;
     };
     while (counter > 0){
-      nums.push(key);
+      nums[index] = parseInt(key);
+      index++;
       counter--;
     };
-  }
+  };
+
+  while (nums[index] !== undefined){
+    nums[index] = '_';
+    index++;
+  };
+
   return nums.length + ', ' + 'nums = ' + nums;
 };
 
