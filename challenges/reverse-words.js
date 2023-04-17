@@ -17,8 +17,7 @@ function reverseWords(string){
   let curr = [];
   let reversed = [];
   for (let i = 0; i <= string.length; i++){
-    console.log(reversed);
-    if (curr[0] === ' '){
+    if (curr == ' '){
       curr = [];
     };
     if(string[i] === ' ' && curr.length > 0 || string[i] === undefined){
