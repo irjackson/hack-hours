@@ -17,3 +17,4 @@ function simpleCheck(a, b, result = 0){
 
 console.log(simpleCheck(3, 5));
 console.log(simpleCheck(8, 4));
+console.log(simpleCheck(54, 17));
