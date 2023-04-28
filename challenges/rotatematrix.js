@@ -27,13 +27,7 @@ function rotateTransform(arr, num){
   if (num < 0){
     newMatrix = arr[0].map((col, i) => arr.map(row => row[i])).reverse();
   }
-  
-  let resultStr = '';
-  while (newMatrix.length){
-    resultStr += `${newMatrix[0]}\n`;
-    newMatrix.shift();
-  }
-  return resultStr;
+  return newMatrix;
 };
 
 console.log(rotateTransform([
