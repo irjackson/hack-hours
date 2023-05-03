@@ -24,12 +24,12 @@ function wordsToSentence(words){
     words.splice(index, 0, ", ");
     length += 1;
     index += 2;
-  }
+  };
 
-  words.splice(words.length - 1, 0, " and ")
+  words.splice(words.length - 1, 0, " and ");
   return words.join('');
 };
 
-console.log(wordsToSentence(["edabit"]))
+console.log(wordsToSentence(["edabit"]));
 console.log(wordsToSentence(["Hello", "", "Bye"]));
-console.log(wordsToSentence(["Hello", "Bye", "See you soon"]))
+console.log(wordsToSentence(["Hello", "Bye", "See you soon"]));
