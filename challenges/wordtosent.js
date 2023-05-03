@@ -18,14 +18,14 @@ function wordsToSentence(words){
     return words.join(" and ");
   };
 
-  let count = 1;
+  let index = 1;
   let length = words.length;
-  while (count < length - 1){
-    words.splice(count, 0, ", ");
+  while (index < length - 1){
+    words.splice(index, 0, ", ");
     length += 1;
-    count += 2;
+    index += 2;
   }
-  
+
   words.splice(words.length - 1, 0, " and ")
   return words.join('');
 };
