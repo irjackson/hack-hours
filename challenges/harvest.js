@@ -41,7 +41,7 @@
 function plant(seed, water, fert, temp){
   let stem = '';
   let flower = '';
-  
+
   for (let i = 0; i < water; i++){
     stem += '-';
   };
@@ -56,7 +56,6 @@ function plant(seed, water, fert, temp){
 
   if (temp < 20 || temp > 30){
     flower = flower.filter(element => element !== seed);
-    flower.fill("-", 0, flower.length - 2);
     flower.push(seed);
   };
 
