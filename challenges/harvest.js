@@ -45,7 +45,7 @@ function plant(seed, water, fert, temp){
     stem += '-';
   };
   for (let i = 0; i < fert; i++){
-    stem += `${seed}`;
+    stem += seed;
   };
   for (let i = 0; i < water; i++){
     flower = flower.concat(stem);
@@ -53,11 +53,15 @@ function plant(seed, water, fert, temp){
   flower = flower.split('');
 
   if (temp < 20 || temp > 30){
-    flower.fill("-", 0, flower.length - 1);
-  }
+    flower = flower.filter(element => element !== seed);
+    flower.fill("-", 0, flower.length - 2);
+    flower.push(seed);
+  };
 
   return flower.join('');
 };
 
 console.log(plant("@", 3, 3, 25));
 console.log(plant("#", 1, 5, 30));
+console.log(plant("&", 5, 1, 20));
+console.log(plant("§", 3, 3, 15));
