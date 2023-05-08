@@ -41,6 +41,7 @@
 function plant(seed, water, fert, temp){
   let stem = '';
   let flower = '';
+  
   for (let i = 0; i < water; i++){
     stem += '-';
   };
@@ -49,7 +50,8 @@ function plant(seed, water, fert, temp){
   };
   for (let i = 0; i < water; i++){
     flower = flower.concat(stem);
-  }
+  };
+
   flower = flower.split('');
 
   if (temp < 20 || temp > 30){
