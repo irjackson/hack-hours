@@ -41,25 +41,28 @@
 function plant(seed, water, fert, temp){
   let stem = '';
   let flower = '';
+  let wilt = false;
 
   for (let i = 0; i < water; i++){
     stem += '-';
   };
-  for (let i = 0; i < fert; i++){
-    stem += seed;
+  if (temp >= 20 && temp <= 30){
+    for (let i = 0; i < fert; i++){
+      stem += seed;
+    };
+  } else {
+    wilt = true;
   };
+
   for (let i = 0; i < water; i++){
-    flower = flower.concat(stem);
+    flower += stem;
   };
 
-  flower = flower.split('');
-
-  if (temp < 20 || temp > 30){
-    flower = flower.filter(element => element !== seed);
-    flower.push(seed);
-  };
-
-  return flower.join('');
+  if (wilt){
+    flower += seed;
+  }
+  
+  return flower;
 };
 
 console.log(plant("@", 3, 3, 25));
