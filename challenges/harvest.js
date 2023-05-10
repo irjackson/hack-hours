@@ -43,21 +43,28 @@ function plant(seed, water, fert, temp){
   let flower = '';
   let wilt = false;
 
+  //concat stem string with stem portion
   for (let i = 0; i < water; i++){
     stem += '-';
   };
+
+  //check if temp is valid
   if (temp >= 20 && temp <= 30){
+    //concat stem string with flower cluster
     for (let i = 0; i < fert; i++){
       stem += seed;
     };
+    //if invalid, reassign wilt variable to true
   } else {
     wilt = true;
   };
 
+  //concat flower string with stem portions
   for (let i = 0; i < water; i++){
     flower += stem;
   };
 
+  //concat flower string with surviving flower
   if (wilt){
     flower += seed;
   }
