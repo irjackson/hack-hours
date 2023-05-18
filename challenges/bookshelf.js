@@ -35,12 +35,16 @@ function Book(title, author){
 
   this.getTitle = () => {
     return this.Title;
-  }
+  };
   this.getAuthor = () => {
     return this.Author;
   };
 };
 
-let PP = new Book("Pride and Prejudice", "Jane Austen");
+const PP = new Book("Pride and Prejudice", "Jane Austen");
 console.log(PP.getTitle());
 console.log(PP.getAuthor());
+
+const H = new Book("Hamlet", "William Shakespeare");
+console.log(H.getTitle());
+console.log(H.getAuthor());
