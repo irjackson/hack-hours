@@ -78,7 +78,6 @@ console.log(s1.ingredients);
 console.log(s1.getCost());
 console.log(s1.getPrice());
 console.log(s1.getName());
-s1.getName();
 const s2 = new Smoothie(["Raspberries", "Strawberries", "Blueberries"])
 console.log(s2.ingredients);
 console.log(s2.getCost());
