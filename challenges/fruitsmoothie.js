@@ -73,13 +73,13 @@ function Smoothie(fruit){
   };
 };
 
-s1 = new Smoothie(["Banana"]);
+const s1 = new Smoothie(["Banana"]);
 console.log(s1.ingredients);
 console.log(s1.getCost());
 console.log(s1.getPrice());
 console.log(s1.getName());
 s1.getName();
-s2 = new Smoothie(["Raspberries", "Strawberries", "Blueberries"])
+const s2 = new Smoothie(["Raspberries", "Strawberries", "Blueberries"])
 console.log(s2.ingredients);
 console.log(s2.getCost());
 console.log(s2.getPrice());
