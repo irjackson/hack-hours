@@ -39,7 +39,7 @@
 //     A team can never score if it hits the crossbar or goes underneath it.
 
 function isGoalScored(goal){
-  for (let i = 0; i < goal.length; i++){
+  for (let i = 0; i < 4; i++){
     console.log(goal[i][0].slice(3,8))
     if (goal[i][0].slice(3,8).includes("0") && !goal[i][0].slice(3,8).includes("#")){
       return true;
@@ -50,8 +50,28 @@ function isGoalScored(goal){
 
 console.log(isGoalScored([
       ["  #     #  "],
+      ["  #  0  #  "],
+      ["  #     #  "],
+      ["  #######  "],
+      ["     #     "],
+      ["     #     "],
+      ["     #     "]
+    ]));
+
+console.log(isGoalScored([
+      ["  #0    #  "],
       ["  #     #  "],
       ["  #     #  "],
+      ["  #######  "],
+      ["     #     "],
+      ["     #     "],
+      ["     #     "]
+    ]));
+
+console.log(isGoalScored([
+      ["  #     #  "],
+      ["  #     #  "],
+      ["  #     # 0"],
       ["  #######  "],
       ["     #     "],
       ["     #     "],
