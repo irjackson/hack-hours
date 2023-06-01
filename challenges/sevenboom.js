@@ -9,8 +9,13 @@
 // sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
   // 97 contains the number seven.
 
-function sevenBoom(){
-
+function sevenBoom(arr){
+  for (let num of arr){
+    if (num.toString().includes('7')) return "Boom!";
+  };
+  return "There is no 7 in the array";
 };
 
-console.log(sevenBoom());
+console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]));
+console.log(sevenBoom([8, 6, 33, 100]));
+console.log(sevenBoom([2, 55, 60, 97, 86]));
