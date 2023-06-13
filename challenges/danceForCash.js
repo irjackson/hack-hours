@@ -29,7 +29,7 @@ function danceConvert(pin){
   for (let i = 0; i < pin.length; i++){
     let selection = parseInt(pin[i]) + parseInt(i);
     if (selection > 9){
-      selection = selection - 10;
+      selection -= 10;
     }
     output.push(moves[selection]);
   };
