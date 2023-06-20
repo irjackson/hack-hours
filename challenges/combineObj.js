@@ -58,7 +58,7 @@ function combineObj(...args){
       newObj[key] = newObj[key] + value || value;
     };
     return newObj;
-  }, {});
+  });
   return newObj;
 };
 
