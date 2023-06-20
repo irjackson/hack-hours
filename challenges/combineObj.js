@@ -56,7 +56,7 @@ function combineObj(...args){
   const newObj = args.reduce((newObj, obj) => {
     for (const [key, value] of Object.entries(obj)){
       newObj[key] = newObj[key] + value || value;
-    }
+    };
     return newObj;
   }, {});
   return newObj;
