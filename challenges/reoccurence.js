@@ -20,8 +20,8 @@
 
 function recurIndex(str, history = {}, index = 0){
   // base case
-  if (str[index] === undefined || str === "" || str === null) return {}
-  if (history.hasOwnProperty(str[index])) return [history[str[index]], index];
+  if (str === null || str[index] === undefined || str === "") return {}
+  if (history.hasOwnProperty(str[index])) return {[str[index]]: [history[str[index]], index]};
   //recursive case
   history[str[index]] = index;
   return recurIndex(str, history, index + 1);
@@ -31,3 +31,5 @@ console.log(recurIndex("DXTDXTXDTXD"));
 console.log(recurIndex("YXZXYTUVXWV"));
 console.log(recurIndex("YZTTZMNERXE"));
 console.log(recurIndex("AREDCBSDERD"));
+console.log(recurIndex(""));
+console.log(recurIndex(null));
