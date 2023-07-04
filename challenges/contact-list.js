@@ -59,3 +59,13 @@ console.log(sortContacts([
   "David Hume",
   "Rene Descartes"
 ], "ASC"));
+
+console.log(sortContacts([
+    "Paul Erdos",
+    "Leonhard Euler",
+    "Carl Gauss"
+  ], "DESC"));
+
+console.log(sortContacts([], "DESC"));
+console.log(sortContacts(null, "DESC"));
+console.log(sortContacts(undefined, "DESC"));
