@@ -41,7 +41,7 @@
 function sortContacts(names, sort) {
   function lastName(str){
     return str.split(' ')[1];
-  }
+  };
   if (!names) return [];
   if (sort === "ASC"){
     return names.sort((a, b) => lastName(a).localeCompare(lastName(b)));
@@ -50,7 +50,7 @@ function sortContacts(names, sort) {
     return names.sort((a, b) => lastName(b).localeCompare(lastName(a)));
   } else {
     return [];
-  }
+  };
 }
 
 console.log(sortContacts([
