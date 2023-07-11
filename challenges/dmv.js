@@ -19,19 +19,12 @@
     // As you are the first.
 
 function license(me, agents, others) {
-	let peopleList = others.split(' ');
-  peopleList.push(me);
-  peopleList.sort();
+	let peopleList = [...others.split(' '), me].sort();
   let totalMinutes = 20;
-  while (peopleList.length){
-    for (let i = 0; i < agents; i++){
-      if (peopleList[i] === me) return totalMinutes;
-      totalMinutes += 20;
-      peopleList.shift();
-    };
-  };
+  return totalMinutes * (((peopleList.indexOf(me) / agents) | 0) + 1)
 };
 
 console.log(license("Eric", 2, "Adam Caroline Rebecca Frank"));
 console.log(license("Zebediah", 1, "Bob Jim Becky Pat"));
 console.log(license("Aaron", 3, "Jane Max Olivia Sam"));
+console.log(license("Zebediah", 4, "Bob Jim Becky Pat"));
