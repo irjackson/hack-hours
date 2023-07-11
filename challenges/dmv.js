@@ -9,14 +9,14 @@
 // Return the number of minutes it will take to get your license.
 
 // Examples
-// license("Eric", 2, "Adam Caroline Rebecca Frank") ➞ 40
-  // As you are in the second group of people.
+  // license("Eric", 2, "Adam Caroline Rebecca Frank") ➞ 40
+    // As you are in the second group of people.
 
-// license("Zebediah", 1, "Bob Jim Becky Pat") ➞ 100
-  // As you are the last person.
+  // license("Zebediah", 1, "Bob Jim Becky Pat") ➞ 100
+    // As you are the last person.
 
-// license("Aaron", 3, "Jane Max Olivia Sam") ➞ 20
-  // As you are the first.
+  // license("Aaron", 3, "Jane Max Olivia Sam") ➞ 20
+    // As you are the first.
 
 function license(me, agents, others) {
 	let peopleList = others.split(' ');
