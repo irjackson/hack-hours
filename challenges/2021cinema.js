@@ -18,38 +18,19 @@
 //     Notice how there may be several possibilities for assigning seats to people, but these cases won't affect the results.
 //     All seats will be valid.
 
-function maximumSeating(arr){
-  let openSeats = 0;
-  let ones = 0;
-  for (let i = 0; i < arr.length; i++){
-    if (arr[i] === 1){
-      ones++;
-      let j = i - 2;
-      while (arr[j] === 0){
-        j++;
-      };
-      if (j > 2){
-        openSeats++;
-      }
-      j = i + 2;
-      while (arr[j] === 0){
-        j--;
-      };
-      if (j < 2){
-        openSeats++;
-      };
-    };
-  };
-  console.log(ones);
-  if (ones === 0){
-    for (let x = 0; x < arr.length; x++){
-      if (x === 0 || x % 3 === 0){
-        openSeats++;
-      }
-    }
-  }
-  return openSeats;
-};
+function maximumSeating(arr) {
+	let seated = 0;
+	
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i - 1] === 1 || arr[i - 2] === 1) continue;
+		if (arr[i + 1] === 1 || arr[i + 2] === 1) continue;
+		
+		if (arr[i] === 0) seated++;
+		arr[i] = 1;
+	}
+	
+	return seated;
+}
 
 console.log(maximumSeating([0, 0, 0, 1, 0, 0, 1, 0, 0, 0]));
 console.log(maximumSeating([0, 0, 0, 0]));
