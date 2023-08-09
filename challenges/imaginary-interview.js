@@ -32,7 +32,19 @@
 //   Try to solve the problem using only array methods.
 
 function interview(arr, tot) {
-	
+	if (arr.length < 8) return 'disqualified';
+  let qualify = true;
+  for (let i = 0; i < arr.length; i++){
+    if (i < 2 && arr[i] > 5) qualify = false;
+    if (i > 1 && i < 4 && arr[i] > 10) qualify = false;
+    if (i > 3 && i < 6 && arr[i] > 15) qualify = false;
+    if (i > 5 && arr[i] > 20) qualify = false;
+  };
+  console.log(qualify);
+  return qualify ? 'qualified':'disqualified';
 };
 
 console.log(interview([5, 5, 10, 10, 15, 15, 20, 20], 120));
+console.log(interview([2, 3, 8, 6, 5, 12, 10, 18], 64));
+console.log(interview([5, 5, 10, 10, 25, 15, 20, 20], 120));
+console.log(interview([5, 5, 10, 10, 15, 15, 20], 120));
