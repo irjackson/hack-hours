@@ -15,7 +15,6 @@
 function posNegSort(arr){
   if (!arr) return arr;
   let sortedNums = arr.filter(a => a > 0).sort();
-  console.log(sortedNums);
   for (let i = 0; i < arr.length; i++){
     if (arr[i] > 0) arr[i] = sortedNums.shift();
   };
@@ -24,5 +23,5 @@ function posNegSort(arr){
 
 console.log(posNegSort([6, 3, -2, 5, -8, 2, -2]));
 console.log(posNegSort([6, 5, 4, -1, 3, 2, -1, 1]));
-console.log(posNegSort([6, 3, -2, 5, -8, 2, -2]));
-console.log(posNegSort([6, 3, -2, 5, -8, 2, -2]));
+console.log(posNegSort([-5, -5, -5, -5, 7, -5]));
+console.log(posNegSort([]));
