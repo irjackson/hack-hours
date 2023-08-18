@@ -17,7 +17,7 @@ function sumCommon(arr1, arr2, arr3){
         return commonNums.push(el);
       };
 		});
-  return commonNums.reduce((acc, curr) => acc + curr, 0)
+  return commonNums.reduce((acc, curr) => acc + curr, 0);
 };
 
 console.log(sumCommon([1, 2, 3], [5, 3, 2], [7, 3, 2]));
