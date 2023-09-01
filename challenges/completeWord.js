@@ -28,7 +28,6 @@ function canComplete(initial, word){
     };
   };    
   console.log(entry);
-  console.log(validLetters);
   return entry.length ? false : true;
 };
 
