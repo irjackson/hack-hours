@@ -29,7 +29,7 @@ function canComplete(initial, word){
   };    
   console.log(entry);
   console.log(validLetters);
-  return !entry.length;
+  return entry.length ? false : true;
 };
 
 console.log(canComplete("butl", "beautiful"));
