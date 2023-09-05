@@ -27,7 +27,6 @@ function canComplete(initial, word){
       entry.shift();
     };
   };    
-  console.log(entry);
   return entry.length ? false : true;
 };
 
