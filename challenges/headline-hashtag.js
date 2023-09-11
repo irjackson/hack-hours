@@ -12,7 +12,6 @@
 //   ➞ ["#visualizing", "#science"]
 
 // Notes
-
 //     If the title is less than 3 words, just order the words in the title by length in descending order (see example #4).
 //     Punctuation does not count towards a word's length.
 
@@ -33,7 +32,6 @@ function getHashTags(str){
     splitWords[i] = `#${splitWords[i]}`.toLowerCase();
     result.push(splitWords[i]);
   };
-  console.log(result);
   return result;
 };
 
