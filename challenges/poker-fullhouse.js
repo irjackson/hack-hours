@@ -10,9 +10,14 @@
 //   isFullHouse(["7", "J", "3", "4", "2"]) ➞ false
 
 function isFullHouse(hand){
+  let tally = {};
   for (let i = 0; i < hand.length; i++){
-    
-  }
+    tally[hand[i]] = tally[hand[i]]+ 1 || 1;
+  };
+  return Object.values(tally).includes(2) && Object.values(tally).includes(3);
 };
 
+console.log(isFullHouse(["A", "A", "A", "K", "K"]));
 console.log(isFullHouse(["3", "J", "J", "3", "3"]));
+console.log(isFullHouse(["10", "J", "10", "10", "10"]));
+console.log(isFullHouse(["7", "J", "3", "4", "2"]));
