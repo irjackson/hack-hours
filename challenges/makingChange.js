@@ -26,15 +26,15 @@ function makeChange(c){
     "p": 0
   };
   while (c > 0){
-    if (c > 25){
+    if (c >= 25){
       change["q"] += 1;
       c -= 25;
     }
-    else if (c <= 25 && c > 10){
+    else if (c < 25 && c >= 10){
       change["d"] += 1;
       c -= 10;
     }
-    else if (c <= 10 && c > 5){
+    else if (c < 10 && c >= 5){
       change["n"] += 1;
       c -= 5;
     }
