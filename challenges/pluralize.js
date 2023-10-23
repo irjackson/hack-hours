@@ -17,9 +17,7 @@ function pluralize(arr){
   for (let i = 0; i < arr.length; i++){
     counted[arr[i]] = counted[arr[i]] + 1 || 1;
   };
-  console.log(counted);
   for (let i = 0; i < Object.entries(counted).length; i++){
-    console.log(Object.entries(counted)[i][1]);
     if (Object.entries(counted)[i][1] > 1){
       result.push(Object.entries(counted)[i][0] + 's');
     } else {
