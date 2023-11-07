@@ -21,10 +21,10 @@ function combineArray(...args){
       if (args[i][index] === undefined){
         newEntry.push('*');
         continue;
-      }
+      };
       newEntry.push(args[i][index]);
     };
-    result.push(newEntry)
+    result.push(newEntry);
     index += 1;
   };
   return result;
