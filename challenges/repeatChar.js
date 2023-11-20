@@ -14,9 +14,8 @@
 //     Using of an existing repeat polyfill too (that's not the challenge objective).
 
 function repeat(str, nb){
-  if (nb <= 0) return '';
-  if (str.length === nb) return str;
-  return repeat(str += str[0], nb);
+  let temp = '';
+  return temp.padStart(nb, str)
 };
 
 console.log(repeat("-", 3));
