@@ -43,7 +43,7 @@ function sweetestIcecream(arr) {
     "Chocolate": 10
   };
   arr.forEach((obj) => {
-    values.push(Number(`${sweetness[obj.flavor]}`) + obj.numSprinkles);
+    values.push(sweetness[obj.flavor] + obj.numSprinkles);
   });
   return Math.max(...values);
 };
