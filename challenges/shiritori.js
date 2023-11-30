@@ -66,7 +66,7 @@ class Shiritori {
     if(!this.words.length){
       this.words.push(word);
       return this.words;
-    }
+    };
     if (!this.words.includes(word)){
       if (word.charAt(0) === this.words[this.words.length-1].charAt(this.words[this.words.length-1].length - 1)){
         this.words.push(word);
@@ -78,13 +78,13 @@ class Shiritori {
     } else {
       this.game_over = true;
       return "game over";
-    }
-  }
+    };
+  };
   restart(){
     this.words = [];
     this.game_over = false;
     return 'game restarted';
-  }
+  };
 };
 
 const my_shiritori = new Shiritori;
