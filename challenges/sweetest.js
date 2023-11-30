@@ -9,8 +9,8 @@
   // Chocolate	10
 
 // You'll be given instance properties in the order flavor, numSprinkles.
-// Examples
 
+// Examples
 // ice1 = IceCream("Chocolate", 13)         // value of 23
 // ice2 = IceCream("Vanilla", 0)           // value of 5
 // ice3 = IceCream("Strawberry", 7)        // value of 17
@@ -24,15 +24,14 @@
 // sweetestIcecream([ice3, ice5]) ➞ 17
 
 // Notes
-
 //     Remember to only return the sweetness value.
 
 class IceCream {
 	constructor(flavor, numSprinkles) {
 		this.flavor = flavor
 		this.numSprinkles = numSprinkles
-	}
-}
+	};
+};
 
 function sweetestIcecream(arr) {
   let values = [];
@@ -45,8 +44,7 @@ function sweetestIcecream(arr) {
   };
   arr.forEach((obj) => {
     values.push(Number(`${sweetness[obj.flavor]}`) + obj.numSprinkles);
-  })
-  console.log(values);
+  });
   return Math.max(...values);
 };
 
