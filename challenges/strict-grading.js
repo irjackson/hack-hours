@@ -28,29 +28,21 @@
 
 function whoPassed(students){
   let passed = [];
-  let studentNames = Object.keys(students);
-  let studentGrades = Object.values(students);
-  let passOrFail = true;
-  let index = 0;
-  for (let i = 0; i < studentNames.length; i++){
-    if (studentGrades[i][index] === undefined) continue;
-    let curr = studentGrades[i][index].split('/');
-    while (studentGrades[i].length){
-      if (Number(curr[0]) / Number(curr[1]) !== 1){
+  for (let name in students){
+    let passOrFail = true;
+    for (let i = 0; i < students[name].length; i++){
+      const curr = students[name][i].split('/');
+      if (curr[0] !== curr[1]){
         passOrFail = false;
         break;
       };
-      studentGrades[i].shift();
-      index++;
     };
     if (passOrFail === true){
-      passed.push(studentNames[i]);
-    }
-    index = 0;
-    passOrFail = true;
-  };
+      passed.push(name);
+    };
+  }
   return passed.sort();
-};
+}
 
 console.log(whoPassed({
       "John" : ["5/5", "50/50", "10/10", "10/10"],
