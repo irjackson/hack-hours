@@ -40,9 +40,9 @@ function whoPassed(students){
     if (passOrFail === true){
       passed.push(name);
     };
-  }
+  };
   return passed.sort();
-}
+};
 
 console.log(whoPassed({
       "John" : ["5/5", "50/50", "10/10", "10/10"],
