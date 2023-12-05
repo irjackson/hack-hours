@@ -46,3 +46,4 @@ function verticalText(str){
 
 console.log(verticalText("Holy bananas"));
 console.log(verticalText("Hello fellas"));
+console.log(verticalText("0 11 222 3333 44444 6666666 77777777 888888888 9999999999"));
