@@ -22,11 +22,8 @@ function totalSeeds(watermelon){
       if (half){
         bite = watermelon[i].slice(4).filter((a)=> a).length;
       };
-      console.log(watermelon[i].slice(0,4).filter((a)=> a));
       seedsInSlice += bite;
-      console.log(bite);
     };
-    console.log(seedsInSlice);
     half = !half;
     if (seedsInSlice > 5){
       return seedsInSlice;
