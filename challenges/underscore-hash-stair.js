@@ -37,9 +37,9 @@
 //     You're expected to solve this challenge using a recursive approach.
 
 function staircase(n, n2 = 1){
-  if (n == 1) return "#".repeat(Math.abs(n2))
-  if (n == -1) return "_".repeat(Math.abs(n2-1)) + "#"
-  return n > 0 ? "_".repeat(n-1)+"#".repeat(n2) + "\n" + staircase(n-1, n2+1) : "_".repeat(Math.abs(Math.abs(n2)-1))+ "#".repeat(Math.abs(n))  + "\n" + staircase(n+1, n2+1)
+  if (n == 1) return "#".repeat(Math.abs(n2));
+  if (n == -1) return "_".repeat(Math.abs(n2-1)) + "#";
+  return n > 0 ? "_".repeat(n-1)+"#".repeat(n2) + "\n" + staircase(n-1, n2+1) : "_".repeat(Math.abs(Math.abs(n2)-1))+ "#".repeat(Math.abs(n))  + "\n" + staircase(n+1, n2+1);
 };
 
 console.log(staircase(7));
