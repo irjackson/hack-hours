@@ -15,17 +15,17 @@
 // All strings given will be lowercase.
 
 function mapLetters(word) {
-	let newMap = {}
+	let newMap = {};
 	for (let i = 0; i < word.length; i++){
 		if (newMap[word[i]]){
-			newMap[word[i]].push(i)
+			newMap[word[i]].push(i);
 		}
 		else {
-			newMap[word[i]] = [i]
-		}
-	}
-  return newMap
-}
+			newMap[word[i]] = [i];
+		};
+	};
+  return newMap;
+};
 
 console.log(mapLetters("abcdefg"));
 console.log(mapLetters(""));
