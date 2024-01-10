@@ -33,7 +33,7 @@ function finalDirection(initial, turns){
 		}
 		if (start < 0){
 			start = 3;
-		}
+		};
 	};
 	return directions[start];
 };
