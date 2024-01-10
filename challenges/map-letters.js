@@ -27,6 +27,7 @@ function mapLetters(word) {
   return newMap
 }
 
-console.log(mapLetters("abcdefg"))
+console.log(mapLetters("abcdefg"));
 console.log(mapLetters(""));
-console.log(mapLetters("mummy"))
+console.log(mapLetters("mummy"));
+console.log(mapLetters("froggy"));
