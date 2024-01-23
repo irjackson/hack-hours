@@ -25,23 +25,29 @@
 //     word with a proper length, the phrase can't be bucketized, and the returned array has to be empty.
 
 function bucketize(phrase, n){
-  let splitPhrase = phrase.split("");
   let bucket = [];
-  let i = 0;
-  while(splitPhrase.length){
-    let segment = splitPhrase.slice(0, n).join('').trim();
-    while(i < n){
-      splitPhrase.shift();
-      i++;
+  let segment = "";
+  for (let word of phrase.split(" ")){
+    if (word.length > n){
+      return [];
     };
-    i = 0;
-    splitPhrase = splitPhrase.join("").trim().split("");
-    if (segment)
-    bucket.push(segment);
-  }
-  console.log(splitPhrase);
+    if (word.length + segment.length < n){
+      if (segment.length){
+        segment += " ";
+      };
+      segment += word;
+    } else {
+      if (segment.length){
+        bucket.push(segment);
+      };
+      segment = word;
+    };
+  };
+  bucket.push(segment);
   return bucket;
 };
 
 console.log(bucketize("she sells sea shells by the sea", 10));
 console.log(bucketize("the mouse jumped over the cheese", 7));
+console.log(bucketize("fairy dust coated the air", 20));
+console.log(bucketize("a b c d e", 2));
