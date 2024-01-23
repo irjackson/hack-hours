@@ -34,7 +34,7 @@ function twentyFiveOnOne(cart){
         total += item.price;
       };
     };
-  }
+  };
   return Number(total.toFixed(2));
 };
 
