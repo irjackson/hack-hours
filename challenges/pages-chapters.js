@@ -26,9 +26,25 @@
 //   All page numbers in the book are valid integers.
 
 function closestToPage(chapters, page){
-  let keys = Object.keys(chapters);
-  let distances = Object.values(chapters).map(x => Math.abs(x - page));
-  return keys[distances.lastIndexOf(Math.min(...distances))];
+  let distances = [];
+  let checkEqual = new Set();
+  let duplicateNum = null;
+  for (chapter of Object.entries(chapters)){
+    let difference = Math.abs(page - chapter[1])
+    distances.push([chapter[0], difference, chapter[1]]);
+    if (checkEqual.has(difference)){
+      duplicateNum = difference;
+    };
+    checkEqual.add(difference);
+  };
+  if (duplicateNum){
+    distances.filter(el => el[1] === duplicateNum);
+    distances = distances.sort((a,b) => b[2] - a[2]);
+    return distances[0][0];
+  } else {
+    distances = distances.sort((a,b) => a[1] - b[1])
+    return distances[0][0];
+  };
 };
 
 console.log(closestToPage({
