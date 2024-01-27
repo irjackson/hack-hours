@@ -27,8 +27,8 @@
 
 function closestToPage(chapters, page){
   let keys = Object.keys(chapters);
-  let val = Object.values(chapters).map(x => Math.abs(x - page));
-  return keys[val.lastIndexOf(Math.min(...val))];
+  let distances = Object.values(chapters).map(x => Math.abs(x - page));
+  return keys[distances.lastIndexOf(Math.min(...distances))];
 };
 
 console.log(closestToPage({
