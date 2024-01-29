@@ -29,8 +29,9 @@ function closestToPage(chapters, page){
   let distances = [];
   let checkEqual = new Set();
   let duplicateNum = null;
+  let difference;
   for (chapter of Object.entries(chapters)){
-    let difference = Math.abs(page - chapter[1])
+    difference = Math.abs(page - chapter[1]);
     distances.push([chapter[0], difference, chapter[1]]);
     if (checkEqual.has(difference)){
       duplicateNum = difference;
