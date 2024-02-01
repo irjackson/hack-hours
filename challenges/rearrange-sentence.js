@@ -16,11 +16,11 @@ function rearrange(sentence){
   let sortedSentence = Array(wordList.length);
   for (word of wordList){
     for (let i = 0; i < word.length; i++){
-      console.log(Number(word[i]))
       if (Number(word[i])){
         let removedNum = word.replace(/\d/g, '')
         console.log(removedNum);
         sortedSentence[Number(word[i])-1] = removedNum;
+        break;
       };
     };
   };
