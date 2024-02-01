@@ -14,8 +14,6 @@ function rearrange(sentence){
   if (!sentence || sentence === " ") return "";
   let wordList = sentence.split(" ");
   let sortedSentence = Array(wordList.length);
-  console.log(wordList);
-  console.log(sortedSentence);
   for (word of wordList){
     for (let i = 0; i < word.length; i++){
       console.log(Number(word[i]))
