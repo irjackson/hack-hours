@@ -18,7 +18,6 @@
 
 function compress(chars){
   let compressed = [];
-  let prev;
   let acc = 1;
   for (let i = 0; i < chars.length; i++){
     if (chars[i+1] !== chars[i] || chars[i+1] === undefined){
