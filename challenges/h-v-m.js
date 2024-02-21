@@ -114,7 +114,6 @@ function battle(data){
       break;
     };
     potionUsed = false;
-    console.log(report);
     results.push(report);
     round++;
   };
