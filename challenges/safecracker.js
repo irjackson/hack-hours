@@ -30,7 +30,6 @@ function safecracker(start, increments){
   let safeCode = Array(3);
   let turns = start;
   for (let i = 0; i < safeCode.length; i++){
-    console.log(increments[i]);
     switch(i){
       case 0:
         turns -= increments[i];
@@ -44,7 +43,6 @@ function safecracker(start, increments){
     }
     safeCode[i] = turns;
   }
-  console.log(safeCode);
   safeCode = safeCode.map((x) => {
     if (x < 0){
       return x += 100;
@@ -58,3 +56,5 @@ function safecracker(start, increments){
 }
 
 console.log(safecracker(0, [3, 10, 5]));
+console.log(safecracker(96, [54, 48, 77]));
+console.log(safecracker(43, [51, 38, 46]));
