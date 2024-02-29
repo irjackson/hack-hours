@@ -40,21 +40,22 @@ function safecracker(start, increments){
       case 2:
         turns -= increments[i];
         break;
-    }
+    };
     safeCode[i] = turns;
-  }
+  };
   safeCode = safeCode.map((x) => {
     if (x < 0){
       return x += 100;
-    } 
+    };
     if (x > 100){
       return x -= 100;
-    }
-    return x
-  })
+    };
+    return x;
+  });
   return safeCode;
-}
+};
 
 console.log(safecracker(0, [3, 10, 5]));
 console.log(safecracker(96, [54, 48, 77]));
 console.log(safecracker(43, [51, 38, 46]));
+console.log(safecracker(4, [69, 88, 55]));
