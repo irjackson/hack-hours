@@ -44,7 +44,54 @@
 // Input is an array of teams.
 
 function champions(teams){
-
+  let result = [0, 0, ''];
+  let gDiff = 0;
+  let totalPoints = 0;
+  function calculateDiff(entry){
+    return 3 * entry.wins + 0 * entry.loss + 1 * entry.draws;
+  };
+  
+  for (let i = 0; i < teams.length; i++){
+    totalPoints = calculateDiff(teams[i]);
+    gDiff = teams[i].scored - teams[i].conceded;
+    if (result[0] < totalPoints){
+      result[0] = totalPoints;
+      result[1] = gDiff;
+      result[2] = teams[i].name;
+    }
+    else if (result[0] === totalPoints){
+      if (results[1] < gDiff){
+        results[1] = gDiff;
+        results[2] = teams[i].name;
+      };
+    };
+  };
+  return result[2];
 };
 
-console.log(champions());
+console.log(champions([
+    {
+      name: "Manchester United",
+      wins: 30,
+      loss: 3,
+      draws: 5,
+      scored: 88,
+      conceded: 20,
+    },
+    {
+      name: "Arsenal",
+      wins: 24,
+      loss: 6,
+      draws: 8,
+      scored: 98,
+      conceded: 29,
+    },
+    {
+      name: "Chelsea",
+      wins: 22,
+      loss: 8,
+      draws: 8,
+      scored: 98,
+      conceded: 29,
+    },
+    ]));
