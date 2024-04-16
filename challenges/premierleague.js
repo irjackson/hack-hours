@@ -62,7 +62,7 @@ function champions(teams){
     else if (result[0] === totalPoints){
       if (results[1] < gDiff){
         results[1] = gDiff;
-        results[2] = teams[i].name;
+        results[2] = teams[i].name
       };
     };
   };
