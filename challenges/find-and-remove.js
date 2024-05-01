@@ -43,11 +43,8 @@
 
 function findAndRemove(obj){
   for (let item in obj){
-    console.log(item);
     for (let entry in obj[item]){
-      console.log(obj[item][entry]);
       if (Number.isNaN(parseInt(obj[item][entry]))){
-        console.log(obj[item]);
         delete obj[item][entry];
       };
     };
