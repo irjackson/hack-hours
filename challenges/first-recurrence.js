@@ -22,7 +22,6 @@ function recurIndex(str){
   let listOfItems = new Set;
   let result = {};
   for (let i = 0; i < str.length; i++){
-    console.log(str[i]);
     if (listOfItems.has(str[i])){
       result[`${str[i]}`] = [str.indexOf(str[i]), i];
       break;
