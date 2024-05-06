@@ -27,7 +27,7 @@ function recurIndex(str){
       break;
     };
     listOfItems.add(str[i]);
-  }
+  };
   return result;
 };
 
