@@ -15,13 +15,11 @@
 //     No formatting methods, etc.
 
 // The goal is to write a short, branch-free piece of code.
+
 // Examples
-
-// perimeter("s", 7) ➞ 28
-
-// perimeter("c", 4) ➞ 25.12
-
-// perimeter("c", 9) ➞ 56.52
+  // perimeter("s", 7) ➞ 28
+  // perimeter("c", 4) ➞ 25.12
+  // perimeter("c", 9) ➞ 56.52
 
 // Notes
 
