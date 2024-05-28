@@ -48,4 +48,3 @@ console.log(stringExpansion("3M2u5b2a1s1h2i1r"));
 console.log(stringExpansion("3M123u42b12a"));
 console.log(stringExpansion(""));
 console.log(stringExpansion("airforce"));
-
