@@ -14,7 +14,7 @@
 // sumRound(54210) ➞ "10 200 4000 50000"
 
 function sumRound(n){
-  
+
 };
 
 console.log(sumRound(101));
