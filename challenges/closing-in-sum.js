@@ -40,7 +40,7 @@ function closingInSum(num){
     };
   };
   console.log(formedDigits);
-  const result = formedDigits.reduce((acc, curr) => (parseInt(acc) + parseInt(curr)));
+  const result = formedDigits.reduce((acc, curr) => (+acc + +curr));
   return result;
 };
 
