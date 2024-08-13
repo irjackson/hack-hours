@@ -32,10 +32,10 @@
 class StackCalc {
   constructor() {
 		this.stack = [];
+    this.invalidStatement = '';
   }
 
   run(instructions) {
-    if (!instructions) return 0;
     instructions = instructions.split(' ');
     for (let step of instructions){
       let val1;
@@ -44,6 +44,7 @@ class StackCalc {
         this.stack.push(parseInt(step));
         continue;
       };
+      console.log(step)
       switch (step){
         case '+':
           val1 = this.stack.pop();
@@ -70,18 +71,34 @@ class StackCalc {
           break;
         case 'POP':
           this.stack.pop();
-          break;  
+          break; 
+        case '':
+          return 0;
         default:
-          console.log(`Invalid instruction: ${step}`);
+          this.invalidStatement = (`Invalid instruction: ${step}`);
+          return;
       }
     }
   }
+  clear(){
+    this.stack = [];
+    this.invalidStatement = '';
+  }
 
   get value() {
+    console.log(this.stack);
+    if (this.invalidStatement !== '') return this.invalidStatement;
+    if (this.stack.length === 0) return 0;
     return this.stack[this.stack.length-1];
   }
 };
 
 let calc = new StackCalc();
+calc.run("y x *"); 
+console.log(calc.value);
+calc.clear();
 calc.run("5 6 +");
+console.log(calc.value);
+calc.clear();
+calc.run("6 5 5 7 * - /");
 console.log(calc.value);
