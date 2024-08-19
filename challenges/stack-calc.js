@@ -40,7 +40,7 @@ class StackCalc {
     for (let step of instructions){
       let val1;
       let val2;
-      if (Number.isInteger(parseInt(step))){
+      if (!isNaN(step)){
         this.stack.push(parseInt(step));
         continue;
       };
