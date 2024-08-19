@@ -86,7 +86,6 @@ class StackCalc {
   }
 
   get value() {
-    console.log(this.stack);
     if (this.invalidStatement !== '') return this.invalidStatement;
     if (this.stack.length === 0) return 0;
     return this.stack[this.stack.length-1];
