@@ -32,10 +32,10 @@
 function itemsPurchased(store, wallet){
   let regex = /[.,\/#!$%\^&\*;:{}=\-_`~()]/g;
   store = Object.entries(store);
-  wallet = wallet.replaceAll(regex, '');
+  wallet = wallet.replace(regex, '');
   let boughtItems = [];
   for (let item of store){
-    item[1] = item[1].replaceAll(regex, '');
+    item[1] = item[1].replace(regex, '');
     if (wallet >= parseInt(item[1])){
       boughtItems.push(item[0]);
     };
