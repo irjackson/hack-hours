@@ -4,17 +4,17 @@
 // Given a positive integer n, implement a function that returns true if n is a Sastry number, or false if it's not.
 
 // Examples
-// isSastry(183) ➞ true
-// Concatenation of n and its successor = 183184
-// 183184 is a perfect square (428 ^ 2)
+  // isSastry(183) ➞ true
+  // Concatenation of n and its successor = 183184
+  // 183184 is a perfect square (428 ^ 2)
 
-// isSastry(184) ➞ false
-// Concatenation of n and its successor = 184185
-// 184185 is not a perfect square
+  // isSastry(184) ➞ false
+  // Concatenation of n and its successor = 184185
+  // 184185 is not a perfect square
 
-// isSastry(106755) ➞ true
-// Concatenation of n and its successor = 106755106756
-// 106755106756 is a perfect square (326734 ^ 2)
+  // isSastry(106755) ➞ true
+  // Concatenation of n and its successor = 106755106756
+  // 106755106756 is a perfect square (326734 ^ 2)
 
 // Notes
 
@@ -24,11 +24,11 @@
 //     In JavaScript, despite the specific challenge the results are proofed, the method used to calculate if an integer greater of 2 ** 53 - 1 
 //     is a Sastry number can lead to errors due to the approximation of the JS engine.
 
-function isSastry(n){
-  let concatenated = parseInt((String(n) + String(n+1)));
+function isSastry(number){
+  let concatenated = parseInt((String(number) + String(number + 1)));
   return Number.isInteger(Math.sqrt(concatenated));
 };
 
 console.log(isSastry(183));
 console.log(isSastry(184));
-console.log(isSastry(183));
+console.log(isSastry(106755));
