@@ -3,7 +3,7 @@
 
 function either404(numbers){
   let match = null;
-  let result = null;
+  let result = false;
   let doubleMatch = {4: null, 0: null};
   for (let i = 0; i < numbers.length; i++){
      if (numbers[i] === 4 || numbers[i] === 0){
