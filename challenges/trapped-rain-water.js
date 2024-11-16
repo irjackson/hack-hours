@@ -10,14 +10,18 @@
 function trap(height){
   let peak = null;
   let totalWater = 0;
+  let gapStart = 0;
+  let gapEnd = 0;
+  let gaps = [];
   for (let i = 0; i < height.length; i++){
     if (height[i] > peak) peak = height[i];
   };
+  console.log(gaps);
   for (let i of height){
     if (peak - (i + 1) > 0) totalWater += (peak - (i + 1));
   };
-  return totalWater;
+  return totalWater;  
 };
 
 console.log(trap([3, 0, 2, 0, 4]));
-console.log(trap([4, 2, 3, 0, 2, 3]))
+// console.log(trap([4, 2, 3, 0, 2, 3]))
