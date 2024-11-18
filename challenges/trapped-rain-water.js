@@ -16,12 +16,34 @@ function trap(height){
   for (let i = 0; i < height.length; i++){
     if (height[i] > peak) peak = height[i];
   };
-  console.log(gaps);
-  for (let i of height){
-    if (peak - (i + 1) > 0) totalWater += (peak - (i + 1));
+  let gapHeight = peak - 1;
+  console.log(gapHeight);
+  for (let i = 0 ; i < height.length; i++){
+    if (height[i] === gapHeight){
+      gapStart = height[i];
+      let count = i+1;
+      while (height[count] < gapStart){
+        gaps.push(height[count]);
+        count++;
+      }
+      gapEnd = height[count];
+    }
+    else if (height[i] === peak){
+      gapStart = gapHeight;
+      let count = i+1;
+      while (height[count] < gapStart){
+        gaps.push(height[count]);
+        count++;
+      }
+      gapEnd = height[count];
+    };
   };
+  console.log(gaps);
+  for (let i = 0; i < gaps.length; i++){
+    totalWater += gapHeight - gaps[i];
+  }
   return totalWater;  
 };
 
 console.log(trap([3, 0, 2, 0, 4]));
-// console.log(trap([4, 2, 3, 0, 2, 3]))
+console.log(trap([4, 2, 3, 0, 2, 3]))
