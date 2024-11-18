@@ -46,4 +46,4 @@ function trap(height){
 };
 
 console.log(trap([3, 0, 2, 0, 4]));
-console.log(trap([4, 2, 3, 0, 2, 3]))
+console.log(trap([4, 2, 3, 0, 2, 3]));
