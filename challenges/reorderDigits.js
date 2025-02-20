@@ -35,12 +35,15 @@ function reorderDigits(arr, direction){
         num = num.split('');
         num = num.sort((a,b) => b - a);
         splitDigits.push(Number(num.join('')));
-      };
+      } 
       return splitDigits;
-    };
+    } else {
+      return 'ERROR: Invalid Direction (Enter "asc" or "desc")';
+    }
   return arr;
 };
 
 console.log(reorderDigits([515, 341, 98, 44, 211], "asc"));
 console.log(reorderDigits([515, 341, 98, 44, 211], "desc"));
 console.log(reorderDigits([63251, 78221], "asc"));
+console.log(reorderDigits([63251, 78221], "top"));
